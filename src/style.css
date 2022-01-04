@@ -1,0 +1,45 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+.slider {
+  max-width: 40rem;
+  margin: 0 auto;
+
+  border: 1px solid #eee;
+}
+
+.slider__inner {
+  display: flex;
+  gap: 1.5rem;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.slider__slide {
+  min-width: 15rem;
+  scroll-snap-align: start;
+}
+
+.slider__slide img {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 35rem) {
+  .slider__slide {
+    min-width: calc(100vw - 1rem - 2px);
+  }
+}
+
+
